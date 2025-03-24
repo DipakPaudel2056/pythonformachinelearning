@@ -46,3 +46,17 @@ print(9 ** 3)
 print(4 ** 0.5)
 
 
+# this is the example of the modulo operator
+# Prints 4 because 29 / 5 is 5 with a remainder of 4
+print(29 % 5)
+
+
+# i also learned about string concatenation
+# i also learned about multiline string in python, 
+# we can use triple quote to do the multiline string
+
+print('''
+This is a multiline string
+It can span multiple lines
+And it can contain 'single' or "double" quotes
+''')
