@@ -35,3 +35,14 @@ print("The change in estimated cost for being male instead of female is" + str(c
 
 # Extra Practice
 # this practice is same as changing the variable value for other 2 variables 
+
+
+# and also i installed anaconda and jupyter notebook in my system to get started with the jupyter notebook
+# today i learned how to define a function and call a function in python
+def create_function():
+    print("This is a function.")
+
+# this is the syntax for creating a function 
+
+# this is how you call the function
+    create_function()
