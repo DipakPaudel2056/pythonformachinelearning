@@ -125,4 +125,5 @@ def destination_setup(origin,destination,estimated_time,mode_of_transport="Car")
 
 destination_setup("kap","melb",estimate)
 
+# tomorrow we will be doing a medical project with functions
 
