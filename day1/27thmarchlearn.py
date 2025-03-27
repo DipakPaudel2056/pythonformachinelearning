@@ -22,3 +22,13 @@ def generate_trip_instructions(location):
 generate_trip_instructions("Central Park")
 generate_trip_instructions("Grand Central Station")
 
+
+# untill now we were just using a single parameter but we can use multiple parameters while defining a functions, those parameters must be separated by comma
+
+def my_function_with_multiple_params(param1, param2):
+    print(f"This is a function that takes two parameters: {param1} and {param2}")
+
+
+# and we can call this function with different arguments
+
+my_function_with_multiple_params("first parameter", "second parameter")
