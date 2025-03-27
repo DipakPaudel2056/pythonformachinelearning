@@ -79,3 +79,50 @@ min_price= min(tshirt_price, shorts_price, mug_price, poster_price)
 print(min_price)
 rounded_price = round(tshirt_price,1)
 print(rounded_price)
+
+# scope
+# the variables defined within the function only can be accessed and modified within the function it is called scope of the function
+# but if there are any variables defined outside of the function it can be accessed outside of the function anywhere in the file
+
+# returns
+
+def add_numbers(a, b):
+  return a + b
+
+result = add_numbers(5, 10)
+print(result)
+
+
+current_budget = 3500.75
+shirt_expense = 9
+def print_remaining_budget(budget):
+  print("Your remaining budget is: $" + str(budget))
+def deduct_expense(budget,expense):
+  return budget - expense
+new_budget_after_shirt = deduct_expense(current_budget,shirt_expense)
+
+print_remaining_budget(current_budget)
+print_remaining_budget(new_budget_after_shirt)
+
+
+# codecademyu function final tutorial
+def trip_planner_welcome(name):
+  print("Welcome to tripplanner v1.0 "+ name)
+
+trip_planner_welcome("Dipak")
+
+def estimated_time_rounded(estimated_time):
+  rounded_time = round(estimated_time)
+  return rounded_time
+
+estimate =  estimated_time_rounded(3.4)
+
+def destination_setup(origin,destination,estimated_time,mode_of_transport="Car"):
+  print("Your trip starts off in "+ origin)
+  print("And you are traveling to "+destination)
+  print("You will be traveling by "+mode_of_transport)
+  print("It will take approximately " + str(estimate) + " hours")
+
+destination_setup("kap","melb",estimate)
+
+
