@@ -60,3 +60,22 @@ def trip_planner(first_destination,second_destination,final_destination = "Codec
 trip_planner("Denmark","France","Germany")
 trip_planner(first_destination = "Iceland",final_destination="Germany",second_destination="India")
 trip_planner("Brooklyn","Queens")
+
+# we have also used 3 different ways of passing arguments to the function
+
+# now we are going to discuss userdefined functions and Builtin functions
+# there are some functions already built in with the python called builtin function i have provided the list of some of the functions here
+
+tshirt_price = 9.75
+shorts_price = 15.50
+mug_price = 5.99
+poster_price = 2.00
+
+# Write your code below:
+max_price = 0
+max_price= max(tshirt_price, shorts_price, mug_price, poster_price)
+print(max_price)
+min_price= min(tshirt_price, shorts_price, mug_price, poster_price)
+print(min_price)
+rounded_price = round(tshirt_price,1)
+print(rounded_price)
