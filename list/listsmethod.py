@@ -37,3 +37,26 @@ long_list_len = len(long_list)
 print(big_range_length)
 
 
+
+# slicing in python is very simple you just have to follow this 
+# letters[start:end]
+
+suitcase = ["shirt", "shirt", "pants", "pants", "pajamas", "books"]
+
+beginning = suitcase[0:2]
+middle = suitcase[2:4]
+# Your code below: 
+print(beginning)
+print(middle)
+# advance slicing includes using the negative index as input to select top from the beginning or the end of the list
+
+advanced_slice = suitcase[:-2] #remove 2 from the end of the list
+
+# count function returns the number of times the inputted argument exist in the list
+
+numbers = [1, 2, 2, 3, 4, 4, 4, 5]
+
+count_two = numbers.count(2) #return 2
+
+# Your code below:
+
