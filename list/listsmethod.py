@@ -58,5 +58,30 @@ numbers = [1, 2, 2, 3, 4, 4, 4, 5]
 
 count_two = numbers.count(2) #return 2
 
+
+
+
+
+# python sort method modifies the list and sort the list in ascending order but if we want to sort the list in descending order we can input reverse = True 
+
+# Checkpoint 1 & 2
+addresses = ["221 B Baker St.", "42 Wallaby Way", "12 Grimmauld Place", "742 Evergreen Terrace", "1600 Pennsylvania Ave", "10 Downing St."]
+addresses.sort()
+print(addresses)
+# Checkpoint 3
+names = ["Ron", "Hermione", "Harry", "Albus", "Sirius"]
+names.sort()
+
+
+# Checkpoint 4 & 5
+cities = ["London", "Paris", "Rome", "Los Angeles", "New York"]
+sorted_cities = cities.sort(reverse=True)
+print(cities)
+
+# advance sort method also includes sorted method that takes a list as input and return a new sorted list and it doesnot modify the original list 
+games = ["Portal", "Minecraft", "Pacman", "Tetris", "The Sims", "Pokemon"]
+
 # Your code below:
+games_sorted = sorted(games)
+print(games,games_sorted)
 
