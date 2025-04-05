@@ -85,3 +85,19 @@ games = ["Portal", "Minecraft", "Pacman", "Tetris", "The Sims", "Pokemon"]
 games_sorted = sorted(games)
 print(games,games_sorted)
 
+
+
+
+
+# codecademy micro project 
+inventory = ["twin bed", "twin bed", "headboard", "queen bed", "king bed", "dresser", "dresser", "table", "table", "nightstand", "nightstand", "king bed", "king bed", "twin bed", "twin bed", "sheets", "sheets", "pillow", "pillow"]
+inventory_len = len(inventory) #finding the number of items in list
+first = inventory[0] #first element
+last = inventory[-1] #last element
+inventory_2_6 = inventory[2:6] #element from index 2 to 6, not including 6
+first_3 = inventory[:3] #last 3 elements
+twin_beds = inventory.count("twin bed") #counting the occurance of word twin bed
+removed_item = inventory.pop(4) #removing index 4 element from the list
+inventory.insert(10,"19th Century Bed Frame") #inserting the string tin the index 10
+inventory.sort() #sorting the elements in ascending order
+print(inventory)
