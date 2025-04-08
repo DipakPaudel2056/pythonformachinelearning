@@ -6,3 +6,10 @@
 grades = [90, 88, 62, 76, 74, 89, 48, 57]
 scaled_grades = [grade+10 for grade in grades] # here i have created new list using the grades list and adding extran 10 in every element
 print(scaled_grades)
+
+
+# another good use case of the list comprehension is we can use list comprehension with the conditional statement as well
+
+heights = [161, 164, 156, 144, 158, 170, 163, 163, 157] #list of the heights of the people
+can_ride_coaster = [height for height in heights if height > 161 ] # list comprehension to check if the height is greater than 161
+print(can_ride_coaster)
