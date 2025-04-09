@@ -26,3 +26,6 @@ print(commute_df.head())
 # it prints first few rows of the csv data and we want to make the change in the column name 
 commute_df.columns = ['name','code1', 'code2', 'state', 'county'] #it is actually assigning a new name to the columns name
 print(commute_df.head())
+
+# after just a small feel for the numpy and pandas we are moving towards the string and dictionaries
+# that's all for now we will see you tomorrow
