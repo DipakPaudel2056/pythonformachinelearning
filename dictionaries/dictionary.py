@@ -35,3 +35,16 @@ print(tc_id)
 
 stack_id = user_ids.get("superStackSmash",100000) #setting the value as 1000000 if the key provided doesnot exist in the dictionary
 print(stack_id)
+
+
+# popping up the value from the dictionary is very easy
+# we use the .pop method to remove the key value pair from the dictionary and in return we get the value of that key and if we donot have the value than we can get the default value by passing on the other argument in the pop method
+available_items = {"health potion": 10, "cake of the cure": 5, "green elixir": 20, "strength sandwich": 25, "stamina grains": 15, "power stew": 30}
+health_points = 20
+ans = available_items.pop("stamina grains") #it returns the value of stamina grains which is 15
+health_points += ans
+
+power_value = available_items.pop("power stew")
+health_points += power_value
+health_points += available_items.pop("mystic bread",0) #it is checking if the mystic bread is in dictionary and pass the default value of 0 if mystic bread is not in the dictionary
+print(available_items,health_points)
