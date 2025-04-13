@@ -23,3 +23,15 @@ if "energy" in zodiac_elements:
 zodiac_elements["energy"] = "Not a Zodiac element"
 
 print(zodiac_elements["energy"])
+
+
+
+# this approach is not sustainable so we have the .get() method to find if the value exist and if the value is not exist than we can also set the value 
+user_ids = {"teraCoder": 100019, "pythonGuy": 182921, "samTheJavaMaam": 123112, "lyleLoop": 102931, "keysmithKeith": 129384}
+
+tc_id = user_ids.get("teraCoder")
+print(tc_id)
+# printing the tc_id which is the key that exist in the dictionary
+
+stack_id = user_ids.get("superStackSmash",100000) #setting the value as 1000000 if the key provided doesnot exist in the dictionary
+print(stack_id)
