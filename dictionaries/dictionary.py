@@ -57,3 +57,17 @@ users = user_ids.keys()
 lessons = num_exercises.keys()
 print(users)
 print(lessons)
+
+# like keys we can also use .values() to list all the values in the dictionary and use it as list 
+num_exercises = {"functions": 10, "syntax": 13, "control flow": 15, "loops": 22, "lists": 19, "classes": 18, "dictionaries": 18}
+total_exercises = 0
+for value in num_exercises.values():
+  total_exercises += value
+
+print(total_exercises)
+
+
+# we can also get the key value as tuple by using .keys method
+pct_women_in_occupation = {"CEO": 28, "Engineering Manager": 9, "Pharmacist": 58, "Physician": 40, "Lawyer": 37, "Aerospace Engineer": 9}
+for key,value in pct_women_in_occupation.items():
+  print("Women make up {} percent of {}s.".format(value,key))
