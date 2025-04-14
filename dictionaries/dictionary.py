@@ -71,3 +71,15 @@ print(total_exercises)
 pct_women_in_occupation = {"CEO": 28, "Engineering Manager": 9, "Pharmacist": 58, "Physician": 40, "Lawyer": 37, "Aerospace Engineer": 9}
 for key,value in pct_women_in_occupation.items():
   print("Women make up {} percent of {}s.".format(value,key))
+  
+  
+# simple codecademy test project
+tarot = { 1:	"The Magician", 2:	"The High Priestess", 3:	"The Empress", 4:	"The Emperor", 5:	"The Hierophant", 6:	"The Lovers", 7:	"The Chariot", 8:	"Strength", 9:	"The Hermit", 10:	"Wheel of Fortune", 11:	"Justice", 12:	"The Hanged Man", 13:	"Death", 14:	"Temperance", 15:	"The Devil", 16:	"The Tower", 17:	"The Star", 18:	"The Moon", 19:	"The Sun", 20:	"Judgement", 21:	"The World", 22: "The Fool"}
+
+spread = {} #empty tarot dictionary
+spread['past'] = tarot.pop(13) #popping the value from the dictionary with key 13 and assigning it to key past for the spread dictionary
+spread['present'] = tarot.pop(22)
+spread['future'] = tarot.pop(10)
+
+for key, value in spread.items(): #looping through spread dictionary using .items() method
+  print("Your "+str(key)+" is the "+ str(value)+" card.")
