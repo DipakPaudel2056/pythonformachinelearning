@@ -12,3 +12,14 @@ with open('file\csvfile.csv') as temp_csv_file:
     csvDict = csv.DictReader(temp_csv_file)
     for row in csvDict:
         print(row)
+        
+        
+# till now we have only dealt with the csv files separated by comma but we also have other kinds of csv file where the delimiter are different
+import csv
+with open('books.csv') as books_csv:
+  books_reader = csv.DictReader(books_csv,delimiter='@') #here the delimiter is @ 
+  isbn_list = []
+  for row in books_reader:
+    isbn_list.append(row['ISBN'])
+
+print(isbn_list)
