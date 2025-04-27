@@ -32,3 +32,29 @@ circle = Circle()
 pizza_area = circle.area(6)
 teaching_table_area = circle.area(18)
 round_room_area = circle.area(5730)
+
+
+# Methods that are used to prepare an object being instantiated are called constructors
+
+class Circle:
+  pi = 3.14
+  
+  # Add constructor here:
+  def __init__(self,diameter): #this is the constructor function we defined earlier, it will run no matter whatever happens inside other function
+    print("New circle with diameter:" +str(diameter))
+    
+  
+teaching_table = Circle(36)
+
+
+
+# there is a global function in python called hasattr() that takes the variable and check if it has thatt attribute this function is called hasattr() function, it takes two parameter, one with the variable and other with the attribute that we want to test against..
+
+# here is the quick implementation of the hasattr() function
+can_we_count_it = [{'s': False}, "sassafrass", 18, ["a", "c", "s", "d", "s"]]
+for element in can_we_count_it:
+  if(hasattr(element,"count")):
+    print(str(type(element)) + " has the count attribute!")
+  else:
+    print(str(type(element)) + " does not have the count attribute :(")
+
