@@ -70,3 +70,27 @@ def add_two_numbers(l1, l2):
         l2 = l2.next if l2 else None
 
     return dummy_head.next
+
+def loop_detection(head):
+    # create two pointer fast and slow
+    fast = head
+    slow = head
+    # move fast at 2 steps at time and slow at 1 step at time
+    while fast != None or fast.next != None:
+        slow = slow.next
+        fast = fast.next
+        # whenever they collide break the loop
+        if slow == fast :
+            break
+    # move slow to head and fast at the same place
+    slow = head
+    # error check if they donot collide return
+    if (fast == None or fast.next == None):
+        return None
+    #find another collision point
+    while (slow != fast):
+        slow = slow.next
+        fast = fast.next
+    return fast
+
+        
