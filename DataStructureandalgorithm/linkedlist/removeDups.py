@@ -33,6 +33,15 @@ class LinkedList:
             left = left.next
             right = right.next
         return right
+    
+    def delete_node(node):
+        if node == None or node.next == None:
+            return False
+        next = node.next
+        node.data = next.data
+        node.next = next.next
+        return True
+    
    
               
         
