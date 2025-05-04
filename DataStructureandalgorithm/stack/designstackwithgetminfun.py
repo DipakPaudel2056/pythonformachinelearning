@@ -28,3 +28,6 @@ class Stack:
         return self.min_stack[-1] if self.min_stack else None
     def getMax(self):
         return self.max_stack[-1] if self.max_stack else None
+    def sortStack(self):
+        # sort from small at the top and large at end
+        return
