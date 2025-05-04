@@ -26,3 +26,7 @@ print(ends_in_a("aardvark"))
 double_or_zero = lambda num: num * 2 if num > 10 else 0
 print(double_or_zero(15))
 print(double_or_zero(5))
+
+# one trick with the python is we can find if the num is multiple of the given number n by using %n 
+# lambda to find if the number is multiple of 3
+multiple_three = lambda num:True if num%3 else False
