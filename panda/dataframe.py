@@ -13,3 +13,11 @@ df1 = pd.DataFrame({
 })
 df1.set_index('name')
 print(df1)
+
+
+# there is yet another way to create a dataframe using only list 
+# we do that using the column keyword to define the name of the column in this way
+
+df2 = pd.DataFrame([[1,'dipak',25],[2,'saksham',26],[3,'anurag',26]],columns=['id','name','age'])
+df2.set_index('name')
+print(df2)
