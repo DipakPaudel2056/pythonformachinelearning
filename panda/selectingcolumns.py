@@ -1,0 +1,2 @@
+# dataframe allows us to select a column or multiple columns from the given dataframe to be able to do that we have 2 ways
+# create a dataframe from the list or the dictionaries or read the csv file and convert that into a data frame
