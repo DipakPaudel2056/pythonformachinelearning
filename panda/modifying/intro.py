@@ -14,4 +14,6 @@ df = pd.DataFrame([
 df['Sold in Bulk?'] = ['Yes','Yes','No','No']
 # also if there is just one value to be populated in one column then we can also do this
 df['is taxed?'] = 'Yes'
+# we can also perform the operation in between the values of the column and create new column in this way
+df['margin'] = df['Price'] - df['Cost to Manufacture']
 print(df)
