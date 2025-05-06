@@ -25,4 +25,10 @@ df['total_earned'] = df.apply(total_earned, axis = 1)
 
 # sometime we want to modify the name of the column itself it is very simple with the .columns attribute in the dataframe itself and we instantiate the list in order with new name and it will do the job
 df.columns = ["ID","Employee Name","Wage","Hours","Last Name","Amount"]
+
+
+# using .columns attribute is not a best practice as it may cause very confusing so we instead using rename method which gives us clear understanding what we are changing and what will be the new column name 
+# lets try to change the Hours to time in previous data frame
+
+df.rename(columns={"Hours":"time_in_hour"},inplace=True)
 print(df)
