@@ -31,3 +31,8 @@ print(clinic_east_greater_than_60)
 
 march_april = df[(df.month == "March") | (df.month == "April")]
 print(march_april)
+
+
+# in the same manner we can also let the dataframe to choose the row of the data from provided list of value like this
+january_february_march = df[df.month.isin(['January','February','March'])] #here it will check the data in month row and if it finds jan feb or march it will return it
+print(january_february_march)
