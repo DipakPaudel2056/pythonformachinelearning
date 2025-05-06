@@ -12,5 +12,6 @@ df = pd.DataFrame([
 # Add columns here
 # here we have manually added a new column with manually typing the data
 df['Sold in Bulk?'] = ['Yes','Yes','No','No']
-
+# also if there is just one value to be populated in one column then we can also do this
+df['is taxed?'] = 'Yes'
 print(df)
