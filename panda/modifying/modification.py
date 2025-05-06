@@ -10,4 +10,19 @@ df = pd.read_csv('panda\modifying\employees.csv')
 get_last_name = lambda name:name.split(' ')[-1]
 # now we want to use this function with the apply method we learnt earlier
 df['lastname'] = df.name.apply(get_last_name) #here we are prepping the name column for the lambda function
-print(df) #it must have new column lastname with the lastname of the employee
+# it must have new column lastname with the lastname of the employee
+#print(df) 
+
+
+
+total_earned = lambda row: (row.hourly_wage * 40) + ((row.hourly_wage * 1.5) * (row.hours_worked - 40)) \
+	if row.hours_worked > 40 \
+  else row.hourly_wage * row.hours_worked
+  
+df['total_earned'] = df.apply(total_earned, axis = 1)
+
+
+
+# sometime we want to modify the name of the column itself it is very simple with the .columns attribute in the dataframe itself and we instantiate the list in order with new name and it will do the job
+df.columns = ["ID","Employee Name","Wage","Hours","Last Name","Amount"]
+print(df)
