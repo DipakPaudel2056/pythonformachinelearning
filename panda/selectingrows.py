@@ -36,3 +36,10 @@ print(march_april)
 # in the same manner we can also let the dataframe to choose the row of the data from provided list of value like this
 january_february_march = df[df.month.isin(['January','February','March'])] #here it will check the data in month row and if it finds jan feb or march it will return it
 print(january_february_march)
+
+
+# to be able to modify the dataframe and after selecting the specific row we can reset the index using reset_index() method
+df3 = df.loc[[1,3,5]]
+df4 = df3.reset_index(inplace = True)
+
+print(df4)
