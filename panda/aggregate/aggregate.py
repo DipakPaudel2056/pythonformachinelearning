@@ -21,4 +21,13 @@ print(maxprice)
 # lets try to find the max of the price for each shoe type.
 
 pricey_shoes = orders.groupby('shoe_type').price.max()
-print(pricey_shoes)
+
+# if we examine the data at this point the return or print is the dataseries not a dataframe. in this case it will be really hard to work with the resultant output so we want to convert it to dataframe for further calculation to do so we use reset_index function
+
+pricey_shoes_df = pricey_shoes.reset_index()
+
+# lets see another example her we want to count how many of the specific shoe type are there
+shoe_count = orders.groupby('shoe_type').id.count().reset_index()
+#at this point the column name is id instead we want count to do so
+shoe_count = shoe_count.rename(columns={'id':'count'})
+print(shoe_count)
