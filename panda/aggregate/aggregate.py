@@ -35,12 +35,17 @@ print(shoe_count)
 
 
 # so far we have only use some basic aggregate function but to calculate more complex logic we can make use of lambda function like this
-orders = pd.read_csv('orders.csv')
-percentile = lambda x : np.percentile(x,25)
-cheap_shoes = orders.groupby('shoe_color').price.apply(percentile,axis=1).reset_index()
+ 
+cheap_shoes = orders.groupby('shoe_color').price.apply(lambda x : np.percentile(x,25)).reset_index()
 
 
 # groupby doesnot only work with one column we can pass the name of the columns as list in the groupby function as well.
 shoe_counts = orders.groupby(['shoe_type','shoe_color'])['id'].count().reset_index().rename(columns={"id":"count"}) #it group according to shoe_type and shoe_color and on the basis of id it count the occurance
-print(shoe_counts)
+
+
+# one of the use of the data modification is to be able to greate a pivot table
+# in pandas we can create a pivot table using .pivot function in dataframe 
+# lets create a pivot table for shoe_count
+shoe_count_pivot = shoe_counts.pivot(index="shoe_type",columns="shoe_color",values="count")
+print(shoe_count_pivot)
 
