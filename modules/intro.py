@@ -17,12 +17,10 @@ randomer_number = random.choice(random_list)
 print(randomer_number)
 
 # codecademy project on module
-import codecademylib3_seaborn
 from matplotlib import pyplot as plt
 import random
 numbers_a = range(1,13)
 numbers_b =random.sample(range(1000),12)
 print(numbers_b)
-# Add your code below:
 plt.plot(numbers_a, numbers_b)
 plt.show()
