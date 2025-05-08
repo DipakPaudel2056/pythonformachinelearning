@@ -1,5 +1,6 @@
 # sometime we want to aggregate the data in the columnd and panda has made it easy to work with using aggregate function
 import pandas as pd
+import numpy as np
 orders = pd.read_csv("panda/aggregate/orders.csv")
 # so if we want to find the maxprice then 
 maxprice = orders.price.max() #it save the maxprice from the price column in orders dataframe
@@ -31,3 +32,9 @@ shoe_count = orders.groupby('shoe_type').id.count().reset_index()
 #at this point the column name is id instead we want count to do so
 shoe_count = shoe_count.rename(columns={'id':'count'})
 print(shoe_count)
+
+
+# so far we have only use some basic aggregate function but to calculate more complex logic we can make use of lambda function like this
+orders = pd.read_csv('orders.csv')
+percentile = lambda x : np.percentile(x,25)
+cheap_shoes = orders.groupby('shoe_color').price.apply(percentile,axis=1).reset_index()
