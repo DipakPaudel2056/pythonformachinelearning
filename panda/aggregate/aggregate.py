@@ -38,3 +38,9 @@ print(shoe_count)
 orders = pd.read_csv('orders.csv')
 percentile = lambda x : np.percentile(x,25)
 cheap_shoes = orders.groupby('shoe_color').price.apply(percentile,axis=1).reset_index()
+
+
+# groupby doesnot only work with one column we can pass the name of the columns as list in the groupby function as well.
+shoe_counts = orders.groupby(['shoe_type','shoe_color'])['id'].count().reset_index().rename(columns={"id":"count"}) #it group according to shoe_type and shoe_color and on the basis of id it count the occurance
+print(shoe_counts)
+
