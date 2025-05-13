@@ -33,3 +33,9 @@ orders_products = pd.merge(orders,products.rename(columns={'id':'product_id'}))
 #so if we want to merge this two column with more control this is what we are supposed to do
 orders_products = pd.merge(orders,products,left_on='product_id',right_on='id',suffixes=['_orders','_products'])
 print(orders_products)
+
+
+# we have yet another functionality while working with multiple tables called concatenate which works only if the columns name and the columns number are same in both table 
+
+# the syntax is :
+# concatenated_df = pandas.concat([df1,df2])
