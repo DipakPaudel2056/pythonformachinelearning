@@ -7,10 +7,16 @@ import pandas as pd
 
 sales = pd.read_csv('panda/multipletable/sales.csv')
 targets = pd.read_csv('panda/multipletable/targets.csv')
+men_women = pd.read_csv('panda/multipletable/men_women.csv')
 
 # lets do inner merge in this two table
 sales_targets = pd.merge(sales,targets)
 # lets find the month where the sales is more than the target
 sales_vs_targets = sales_targets[sales_targets.revenue > sales_targets.target]
-print(sales_vs_targets)
 
+# now is time to do more complicated stuff
+# since we can merge multiple tables together we can actually chain the merge method
+all_results = sales.merge(targets).merge(men_women)
+# now the assignment is find a month where the revenue > target and women > men
+results = all_results[(all_results.revenue > all_results.target) & (all_results.women > all_results.men)]
+print(results)
