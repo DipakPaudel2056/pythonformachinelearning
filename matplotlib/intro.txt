@@ -1,0 +1,3 @@
+till now we have seen how to modify the data,
+summarise the data and work with them to get clear insight about the data. but now it is time to present our findings
+to present the findings we have used a popular python library called matplotlib
