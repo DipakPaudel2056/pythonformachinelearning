@@ -25,6 +25,15 @@ plt.plot(time,costs,color='#82edc9',marker='s')
 
 # here we donot have the control on how much of zoom is required on the chart
 # to deal with this issue we want to use .axis method and pass min-x,max-x,min-y,max-y 
-plt.plot(time,revenue)
 plt.axis([0,5,100,900])
+
+
+# we can also make the change in the name of the x-axis y-axis and the title to do so we use
+#.xlabel
+#.ylabel
+#.title method
+plt.plot(time,revenue)
+plt.xlabel('time')
+plt.ylabel('revenue')
+plt.title('revenue vs time')
 plt.show()
