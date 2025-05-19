@@ -1,4 +1,3 @@
-import codecademylib
 from matplotlib import pyplot as plt
 
 x = range(7)
