@@ -1,0 +1,8 @@
+what does machine learning specialization covers?
+1. Data science foundations
+2. Supervised machine learning models
+3. Unsupervised machie learning models
+4. Deep learning with tensorflow
+5. Feature Engineering
+6. Evaluation Metrics
+7. Handling Big data with Pyspark
