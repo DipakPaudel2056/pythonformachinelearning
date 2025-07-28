@@ -42,37 +42,18 @@ print(reviews['department_name'].value_counts())
 #perform get_dummies
 one_hot = pd.get_dummies(reviews['department_name'])
 #join the new columns back onto the original
-reviews = reviews.join(one_hot)
+reviews = pd.concat([reviews,one_hot])
 #print column names
 print(reviews.dtypes)
 #transform review_date to date-time data
 reviews['review_date'] = pd.to_datetime(reviews['review_date'])
 #print review_date data type 
-print(reviews['review_date'].dtype)
+print(reviews['review_date'].columns)
 #get numerical columns
 reviews = reviews[['clothing_id','age','recommended','rating','Bottoms','Dresses','Intimate','Jackets','Tops','Trend']].copy()
 #reset index
-reviews = reviews.set_index(reviews['clothing_id'])
+reviews = reviews.set_index('clothing_id')
 #instantiate standard scaler
 scaler = StandardScaler()
-#fit transform data
-print(scaler.fit_transform(reviews))
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
- 
-
-
-
-
+scaled_reviews = scaler.fit_transform(reviews)
+print(scaled_reviews)
