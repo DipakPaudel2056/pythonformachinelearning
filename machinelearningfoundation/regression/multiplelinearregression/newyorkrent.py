@@ -22,3 +22,11 @@ y_predict = mlr.predict(x_test)
 sonny_apartment = [[1, 1, 620, 16, 1, 98, 1, 0, 1, 0, 0, 1, 1, 0]]
 predict = mlr.predict(sonny_apartment)
 print( predict)
+
+
+# let's analyse the model using the Residual analysis for that the scikit gives us the score method which is the coefficient of determination
+# this R^2 value must be more than 0.70 for the model to be called as good 
+# let's find the R^2 value for the 
+R2 = mlr.score(x_train,y_train)
+R3 = mlr.score(x_test,y_test)
+print(R2,R3)
